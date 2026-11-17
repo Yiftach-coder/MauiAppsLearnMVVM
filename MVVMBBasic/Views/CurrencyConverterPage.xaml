@@ -15,19 +15,26 @@
                FontAttributes="Bold"
                HorizontalOptions="Center" />
 
-        <Label Text="Amount in ILS"
+        <Label Text="Amount"
                FontAttributes="Bold" />
 
         <Entry Text="{Binding Amount}"
-               Placeholder="Enter amount in shekels"
+               Placeholder="Enter amount"
                Keyboard="Numeric" />
 
-        <Label Text="Choose currency"
+        <Label Text="From"
                FontAttributes="Bold" />
 
-        <Picker Title="Select currency"
+        <Picker Title="Select source currency"
                 ItemsSource="{Binding Currencies}"
-                SelectedItem="{Binding SelectedCurrency}" />
+                SelectedItem="{Binding SourceCurrency}" />
+
+        <Label Text="To"
+               FontAttributes="Bold" />
+
+        <Picker Title="Select target currency"
+                ItemsSource="{Binding Currencies}"
+                SelectedItem="{Binding TargetCurrency}" />
 
         <Button Text="Convert"
                 Command="{Binding ConvertCommand}" />
