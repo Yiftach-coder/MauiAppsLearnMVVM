@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ViewModels"
+             x:Class="Views.CurrencyConverterPage"
+             x:DataType="vm:CurrencyConverterViewModel"
+             Title="{Binding Title}">
+
+    <VerticalStackLayout Padding="30"
+                         Spacing="20"
+                         VerticalOptions="Center">
+
+        <Label Text="Currency Converter"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Amount in ILS"
+               FontAttributes="Bold" />
+
+        <Entry Text="{Binding Amount}"
+               Placeholder="Enter amount in shekels"
+               Keyboard="Numeric" />
+
+        <Label Text="Choose currency"
+               FontAttributes="Bold" />
+
+        <Picker Title="Select currency"
+                ItemsSource="{Binding Currencies}"
+                SelectedItem="{Binding SelectedCurrency}" />
+
+        <Button Text="Convert"
+                Command="{Binding ConvertCommand}" />
+
+        <Label Text="{Binding Result}"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Green" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

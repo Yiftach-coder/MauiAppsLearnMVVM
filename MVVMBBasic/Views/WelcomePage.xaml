@@ -30,6 +30,12 @@
                 HeightRequest="55"
                 WidthRequest="250" />
 
+        <Button Text="Currency Converter"
+                Command="{Binding NavigateToCurrencyConverterCommand}"
+                HeightRequest="55"
+                WidthRequest="250" />
+
+
     </VerticalStackLayout>
 
 </ContentPage>

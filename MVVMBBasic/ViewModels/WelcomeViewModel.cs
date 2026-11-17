@@ -7,6 +7,8 @@ namespace ViewModels
     {
         public ICommand NavigateToAgeCalculatorCommand { get; }
         public ICommand NavigateToMathCalculatorCommand { get; }
+        public ICommand NavigateToCurrencyConverterCommand { get; }
+
 
         public WelcomeViewModel()
         {
@@ -21,6 +23,12 @@ namespace ViewModels
             {
                 await Shell.Current.GoToAsync("//CalculatorPage");
             });
+
+            NavigateToCurrencyConverterCommand = new Command(async () =>
+            {
+                await Shell.Current.GoToAsync("//CurrencyConverterPage");
+            });
+
         }
     }
 }

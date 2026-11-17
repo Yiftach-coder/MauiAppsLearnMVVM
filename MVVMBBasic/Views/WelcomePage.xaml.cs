@@ -14,5 +14,7 @@ namespace Views
             InitializeComponent();
             BindingContext = viewModel;
         }
+
+
     }
 }
